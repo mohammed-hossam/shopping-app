@@ -1,0 +1,42 @@
+.icon {
+  font-size: 1.5rem;
+  color: white;
+  background-color: #350965;
+  border-radius: 0.5rem;
+  padding: 0.5em 0.5em;
+  display: flex;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+  @if $breakpoint == smallPhone {
+    @media (max-width: 23.5em) {
+      //375px
+      @content;
+    }
+  }
+
+  @if $breakpoint == port {
+    @media (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (max-width: 75em) {
+      //1200px
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      //1800px
+      @content;
+    }
+  }
+}

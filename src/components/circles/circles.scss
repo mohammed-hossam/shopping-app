@@ -1,0 +1,91 @@
+@use '../../utiles.scss' as *;
+
+.circles {
+  position: absolute;
+  top: -9%;
+  left: 50%;
+  transform: translate(-55%);
+  @include respond(port) {
+    top: -11%;
+  }
+
+  &_outer2 {
+    position: relative;
+    background: white;
+    border-radius: 50%;
+    height: 11em;
+    width: 11em;
+    border: 0.5em solid transparent;
+    background-image: linear-gradient(white, white),
+      linear-gradient(-140deg, #7e1aa6 25%, #d6bedb 20%);
+
+    background-origin: content-box, border-box;
+    background-clip: content-box, border-box;
+  }
+
+  &_inner {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    height: 8em;
+    width: 8em;
+    right: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 5px 0px rgba(158, 156, 156, 0.6);
+    text-align: center;
+    text-transform: uppercase;
+    p:first-child {
+      color: #7e1aa6;
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-top: 0.5em;
+    }
+    p:nth-child(2) {
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+    }
+    p:nth-child(3) {
+      color: #787878;
+      margin-top: 0.2em;
+      font-size: 1.2rem;
+      span {
+        font-size: 0.8rem;
+        display: block;
+      }
+    }
+  }
+  .win {
+    position: absolute;
+    top: 62%;
+    left: 65%;
+    // border: 1px solid red;
+    padding: 3.5em;
+    background-image: radial-gradient(
+      at top left,
+      transparent 45%,
+      #350965 41%,
+      #350965 72%,
+      transparent 62.5%
+    );
+    background-size: 96% 100%;
+    background-repeat: no-repeat;
+    &_details {
+      color: white;
+      font-weight: bold;
+      position: absolute;
+      font-size: 1.6rem;
+
+      &--1 {
+        transform: translateX(-97%) rotate(-45deg) translateY(28%);
+      }
+      &--2 {
+        transform: translateX(146%) rotate(-59deg) translateY(-223%);
+      }
+    }
+    @include respond(port) {
+      display: none;
+    }
+  }
+}

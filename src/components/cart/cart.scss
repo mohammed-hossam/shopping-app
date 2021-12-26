@@ -1,0 +1,12 @@
+@use '../../utiles.scss' as *;
+
+.cart {
+  .icon {
+    background-color: #7e1aa6;
+    margin-top: 0.5em;
+    @include respond(port) {
+      margin-top: 0;
+      margin-left: 0.5em;
+    }
+  }
+}

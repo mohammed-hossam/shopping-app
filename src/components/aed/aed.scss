@@ -1,0 +1,23 @@
+.aed {
+  // border: 2px solid hotpink;
+  position: absolute;
+  top: 1rem;
+  left: -1.5rem;
+  &_details {
+    background-color: #7e1aa6;
+    padding: 0.2em 1.5em 0.5em 1.5em;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  &_3d {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 1.5em 1.5em 0;
+    border-color: transparent #350965 transparent transparent;
+    overflow: hidden;
+    position: absolute;
+  }
+}

@@ -1,0 +1,56 @@
+@use '../../utiles.scss' as *;
+.card {
+  // border: 5px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 50%;
+
+  border-radius: 3rem;
+  padding: 6em 2.5em 1em 2.5em;
+  @include respond(port) {
+    width: 100%;
+    padding-top: 7.5em;
+    padding-bottom: 2em;
+  }
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  &_img {
+    // border: 5px solid green;
+    margin-right: 2em;
+    width: 10rem;
+    height: 10rem;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &_details {
+    // border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    &_category {
+      color: #7e1aa6;
+      font-weight: 800;
+      font-size: 1.25rem;
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+    &_title {
+      color: #6b6b6b;
+    }
+    &_description {
+      color: #aca9a9;
+    }
+  }
+}
+// #7E1AA6 #350965 #6B6B6B #CDCDCD

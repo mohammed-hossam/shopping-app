@@ -1,0 +1,16 @@
+@use './utiles.scss' as *;
+
+.App {
+  // border: 2px solid fuchsia;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-grow: 1; */
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f3f0f3;
+  overflow-x: hidden;
+  @include respond(smallPhone) {
+    padding: 8em 2em;
+  }
+}
